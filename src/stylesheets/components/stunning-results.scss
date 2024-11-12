@@ -1,77 +1,51 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+@import 'variables';
+
+.stunning-results {
+    background-color: $color-white;
+    padding: $spacing-16 0;
 }
 
-.section {
-    padding: 5rem 0;
-    background-color: white;
-}
-
-.container {
-    max-width: 1200px;
+.results-container {
+    max-width: $container-max-width;
     margin: 0 auto;
-    padding: 0 1rem;
-}
-
-h2 {
-    font-size: 2.25rem;
-    font-weight: bold;
+    padding: 0 $spacing-4;
     text-align: center;
-    margin-bottom: 1rem;
 }
 
-.subtitle {
-    text-align: center;
-    color: #4b5563;
-    margin-bottom: 3rem;
+.results-title {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    color: $color-gray-900;
+    margin-bottom: $spacing-8;
 }
 
-.stats-grid {
+.results-grid {
     display: grid;
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-8;
 }
 
-.stat-item {
+.result-item {
+    background-color: $color-gray-100;
+    padding: $spacing-6;
+    border-radius: $border-radius-lg;
     text-align: center;
 }
 
-.stat-circle {
-    position: relative;
-    display: inline-block;
-    width: 8rem;
-    height: 8rem;
+.result-icon {
+    font-size: $font-size-4xl;
+    color: $color-primary;
+    margin-bottom: $spacing-4;
 }
 
-.stat-circle svg {
-    width: 100%;
-    height: 100%;
+.result-number {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $color-gray-900;
+    margin-bottom: $spacing-2;
 }
 
-.stat-circle span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.stat-label {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.stat-description {
-    color: #4b5563;
-}
-
-@media (min-width: 768px) {
-    .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.result-text {
+    font-size: $font-size-lg;
+    color: $color-gray-600;
 }

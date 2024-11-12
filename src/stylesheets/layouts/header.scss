@@ -1,122 +1,52 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+@import 'variables';
 
 .hero {
-    min-height: 100vh;
-    background-color: black;
-    color: white;
-    position: relative;
-    overflow: hidden;
+    background-color: $color-gray-100;
+    padding: $spacing-16 0;
 }
 
-.container {
-    max-width: 1200px;
+.hero-container {
+    max-width: $container-max-width;
     margin: 0 auto;
-    padding: 0 1rem;
-    padding-top: 5rem;
-}
-
-nav {
+    padding: 0 $spacing-4;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5rem;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #E6C662;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    color: #E6C662;
-}
-
-.nav-button {
-    border: 1px solid white;
-    background: none;
-    color: white;
-    padding: 0.25rem 1rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-}
-
-.nav-button:hover {
-    background-color: #E6C662;
-    border-color: #E6C662;
 }
 
 .hero-content {
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-}
-
-.hero-text {
     max-width: 50%;
 }
 
-.hero-subtitle {
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 2rem;
-}
-
 .hero-title {
-    font-size: 3.75rem;
-    font-weight: bold;
-    color: #E6C662;
-    margin: 0;
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-bold;
+    color: $color-gray-900;
+    margin-bottom: $spacing-4;
 }
 
-.hero-description {
-    font-size: 1.875rem;
-    font-weight: 300;
-    margin: 1rem 0;
+.hero-subtitle {
+    font-size: $font-size-xl;
+    color: $color-gray-600;
+    margin-bottom: $spacing-6;
 }
 
-.hero-paragraph {
-    color: #9ca3af;
-    max-width: 28rem;
-    margin-bottom: 2rem;
-}
+.hero-button {
+    display: inline-block;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: $spacing-3 $spacing-6;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-weight: $font-weight-semibold;
+    transition: background-color $transition-default;
 
-.app-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.app-link {
-    width: 8rem;
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
 }
 
 .hero-image {
-    text-align: center;
-}
-
-.hero-image img {
-    max-width: 100%;
+    max-width: 45%;
     height: auto;
-}
-
-@media (min-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr 1fr;
-    }
 }

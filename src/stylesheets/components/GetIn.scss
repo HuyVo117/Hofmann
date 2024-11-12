@@ -1,3 +1,5 @@
+@import 'variables';
+
 body,
 html {
     margin: 0;
@@ -6,76 +8,72 @@ html {
 }
 
 .get-in-touch {
-    padding: 5rem 0;
+    padding: $spacing-20 0;
     background-image: url('/placeholder.svg?height=600&width=1200');
     background-size: cover;
     background-position: center;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: $container-max-width;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 $spacing-4;
 }
 
 .form-container {
     max-width: 28rem;
     margin: 0 auto;
-    background-color: rgba(31, 41, 55, 0.8);
-    padding: 2rem;
-    border-radius: 0.5rem;
+    background-color: rgba($color-gray-800, 0.8);
+    padding: $spacing-8;
+    border-radius: $border-radius-lg;
 }
 
 .form-title {
-    font-size: 1.875rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 1.5rem;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    margin-bottom: $spacing-6;
 }
 
 .form-input {
     width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
+    margin-bottom: $spacing-4;
+    padding: $spacing-2;
+    border-radius: $border-radius;
     border: none;
 }
 
 .form-textarea {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    border: none;
+    @extend .form-input;
     resize: vertical;
 }
 
 .form-checkbox {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
-}
+    margin-bottom: $spacing-4;
 
-.form-checkbox input {
-    margin-right: 0.5rem;
-}
+    input {
+        margin-right: $spacing-2;
+    }
 
-.form-checkbox label {
-    color: white;
+    label {
+        color: $color-white;
+    }
 }
 
 .form-submit {
     width: 100%;
-    background-color: #E6C662;
-    color: white;
-    padding: 0.5rem;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: $spacing-2;
     border: none;
-    border-radius: 0.25rem;
-    font-weight: bold;
+    border-radius: $border-radius;
+    font-weight: $font-weight-bold;
     cursor: pointer;
-    transition: opacity 0.3s;
-}
+    transition: opacity $transition-default;
 
-.form-submit:hover {
-    opacity: 0.9;
+    &:hover {
+        opacity: 0.9;
+    }
 }
