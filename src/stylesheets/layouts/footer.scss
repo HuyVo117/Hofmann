@@ -1,81 +1,72 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+@import 'variables';
 
 .footer {
-    background-color: #111827;
-    color: white;
-    padding: 3rem 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    background-color: $color-gray-900;
+    color: $color-white;
+    padding: $spacing-12 0;
 }
 
 .footer-grid {
     display: grid;
-    gap: 2rem;
+    gap: $spacing-8;
 }
 
-.footer-column h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
+.footer-column {
+    h3 {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-4;
+    }
 
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.footer-column li {
-    margin-bottom: 0.5rem;
-}
+    li {
+        margin-bottom: $spacing-2;
+    }
 
-.footer-column a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+    a {
+        color: $color-white;
+        text-decoration: none;
+        transition: color $transition-default;
 
-.footer-column a:hover {
-    color: #E6C662;
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }
 
 .footer-bottom {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #374151;
+    margin-top: $spacing-12;
+    padding-top: $spacing-8;
+    border-top: 1px solid $color-gray-700;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .footer-copyright {
-    margin-bottom: 1rem;
+    margin-bottom: $spacing-4;
 }
 
 .footer-social {
     display: flex;
-    gap: 1rem;
+    gap: $spacing-4;
+
+    a {
+        color: $color-gray-400;
+        transition: color $transition-default;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
 }
 
-.footer-social a {
-    color: #9ca3af;
-    transition: color 0.3s;
-}
-
-.footer-social a:hover {
-    color: white;
-}
-
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
     .footer-grid {
         grid-template-columns: repeat(4, 1fr);
     }
