@@ -1,0 +1,78 @@
+@import 'variables';
+
+.recent-products {
+    background-color: $color-white;
+    padding: $spacing-20 0;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-4;
+}
+
+.section-title {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: $spacing-4;
+    color: $color-gray-900;
+}
+
+.section-description {
+    text-align: center;
+    color: $color-gray-600;
+    margin-bottom: $spacing-12;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products-grid {
+    display: grid;
+    gap: $spacing-8;
+
+    @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: $border-radius-lg;
+    margin-bottom: $spacing-4;
+}
+
+.product-name {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-2;
+    color: $color-gray-900;
+}
+
+.product-authors {
+    font-size: $font-size-sm;
+    color: $color-gray-600;
+    margin-bottom: $spacing-4;
+}
+
+.product-button {
+    padding: $spacing-2 $spacing-6;
+    background-color: $color-primary;
+    color: $color-white;
+    border: none;
+    border-radius: $border-radius-full;
+    font-weight: $font-weight-semibold;
+    cursor: pointer;
+    transition: background-color $transition-default;
+
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+}

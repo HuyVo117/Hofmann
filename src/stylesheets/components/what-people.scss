@@ -1,0 +1,111 @@
+@import 'variables';
+
+.what-people-say {
+    background-color: $color-white;
+    padding: $spacing-20 0;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-4;
+}
+
+.section-title {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: $spacing-12;
+    color: $color-gray-900;
+}
+
+.testimonial-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-slide {
+    display: none;
+    max-width: 28rem;
+    padding: $spacing-8;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 10px 15px -3px rgba($color-black, 0.1);
+
+    &.active {
+        display: block;
+    }
+
+    &.bg-primary {
+        background-color: $color-primary;
+    }
+
+    &.bg-gray-800 {
+        background-color: $color-gray-800;
+    }
+}
+
+.testimonial-quote {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-4;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: $border-radius-full;
+    margin-right: $spacing-4;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: $font-weight-semibold;
+}
+
+.author-role {
+    font-size: $font-size-sm;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-8;
+}
+
+.slider-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: $border-radius-full;
+    background-color: $color-gray-300;
+    margin: 0 $spacing-1;
+    cursor: pointer;
+
+    &.active {
+        background-color: $color-gray-800;
+    }
+}
+
+.text-white {
+    color: $color-white;
+}
+
+.text-gray-800 {
+    color: $color-gray-800;
+}
+
+.text-gray-300 {
+    color: $color-gray-300;
+}
+
+.text-gray-600 {
+    color: $color-gray-600;
+}
